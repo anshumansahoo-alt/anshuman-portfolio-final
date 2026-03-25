@@ -10,26 +10,8 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-// ✅ CORS — allow your GitHub Pages or Render static site URL
-const allowedOrigins = [
-  "http://localhost:5500",        // VS Code Live Server
-  "http://127.0.0.1:5500",
-  "http://localhost:3000",
-  process.env.FRONTEND_URL,       // set this in Render env vars (your GitHub Pages URL)
-].filter(Boolean);
-
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      // Allow requests with no origin (e.g. curl, Postman) or from allowed list
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error(`CORS blocked: ${origin}`));
-      }
-    },
-  })
-);
+// ✅ Open CORS — fine for a portfolio site
+app.use(cors());
 
 app.use(express.json());
 
