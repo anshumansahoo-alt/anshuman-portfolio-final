@@ -1,0 +1,328 @@
+:root {
+  --bg: #0B0F1A;
+  --card: #111827;
+  --primary: #3B82F6;
+  --cyan: #38BDF8;
+  --purple: #8B5CF6;
+  --text: #E5E7EB;
+  --muted: #9CA3AF;
+  --border: #1F2933;
+}
+body{
+
+padding:40px;
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  padding: 80px 10%;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: rgba(11, 15, 26, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+}
+
+.logo {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li:hover {
+  color: var(--cyan);
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+
+.hero-content span {
+  color: var(--primary);
+}
+
+.intro {
+  color: var(--cyan);
+}
+
+.hero-text {
+  margin-top: 15px;
+  max-width: 600px;
+  color: var(--muted);
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, var(--primary), var(--purple));
+  color: #fff;
+}
+
+.btn.outline {
+  border: 1px solid var(--border);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* CARDS */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+/* CERTIFICATIONS */
+.cert-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.cert {
+  border-left: 4px solid var(--primary);
+}
+
+/* CONTACT */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: #0F172A;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+.send {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--purple));
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.muted {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+.profile-pic {
+  width: 180px;          /* 👈 change size here */
+  height: 250px;
+  border-radius: 30px;
+  object-fit: cover;
+border-radius:50px ;
+  border: 3px solid var(--primary);
+  margin-bottom: 20px;
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect */
+.profile-pic:hover {
+  transform: scale(1.08);
+}
+
+/* CERTIFICATES SECTION */
+#certificates {
+  margin-top: 40px;
+}
+
+.cert-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.cert-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.cert-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Hover effect */
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.25);
+}
+
+
+/* CONTACT FORM STYLING */
+#contact {
+  background: rgba(11, 15, 26, 0.85); /* your requested dark background */
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff; /* white text on dark background */
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+#contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #555; /* subtle border */
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05); /* slightly transparent inputs */
+  color: #fff;
+  resize: none;
+}
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* lighter placeholder text */
+}
+
+#contactForm textarea {
+  min-height: 120px;
+}
+
+#contactForm button {
+  padding: 15px;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+  background-color: #0056b3;
+}
+
+/* Focus effect for inputs */
+#contactForm input:focus,
+#contactForm textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  #contactForm {
+    padding: 0 10px;
+  }
+}
