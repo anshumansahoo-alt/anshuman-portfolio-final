@@ -4,7 +4,7 @@ console.log("script.js connected");
 const BACKEND_URL =
   window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
     ? "http://localhost:4000"
-    : "https://api.render.com/deploy/srv-d71r538ule4c73d1vcag?key=9j1nEKfdkYU"; // 🔁 Replace with your Render backend URL after deploying
+    : "https://anshuman-portfolio-final.onrender.com"; // 🔁 Replace with your Render backend URL after deploying
 
 document.getElementById("contactForm").addEventListener("submit", async function (e) {
   e.preventDefault();
